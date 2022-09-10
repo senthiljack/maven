@@ -4,7 +4,7 @@
     <groupId>com.mycompany</groupId>
     <artifactId>mypro</artifactId>
     <version>1.2.19-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
