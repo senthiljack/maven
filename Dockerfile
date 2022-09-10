@@ -1,5 +1,6 @@
 FROM openjdk:11
+CMD mkdir -p /usr/src/myapp
 COPY ./target/*.jar /usr/src/myapp
 WORKDIR /usr/src/myapp
-RUN javac Main.java
-CMD ["java", "Main"]
+RUN java -jar *.jar
+
