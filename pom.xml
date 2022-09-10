@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
     <artifactId>mypro</artifactId>
-    <version>1.2.9-SNAPSHOT</version>
+    <version>1.2.10-SNAPSHOT</version>
     <packaging>pom</packaging>
    
     <properties>
