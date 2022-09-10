@@ -32,8 +32,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.3</version>
-                    <configuration>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
+		    <configuration>
+			     <tagNameFormat>v@{project.version}</tagNameFormat>
+                             <autoVersionSubmodules>true</autoVersionSubmodules>
+                             <releaseProfiles>releases</releaseProfiles>
+
                      <providerImplementations>
                         <svn>javasvn</svn>
                     </providerImplementations>
