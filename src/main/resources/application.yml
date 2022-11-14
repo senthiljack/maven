@@ -1,0 +1,69 @@
+logging:
+  level:
+    root: info
+#server:
+#  servlet:
+#    contextPath: /api/it-ticketing
+spring:
+  jpa:
+    properties:
+      org:
+        hibernate:
+          envers:
+            audit_table_suffix: _AUDIT
+            revision_field_name: REVISION_ID
+            revision_type_field_name: REVISION_TYPE
+#  mail:
+#    default-encoding: UTF-8
+#    host: smtp.office365.com
+#    username: KamerAIDemo@kamerai.ai
+#    password: Kamerai@2020
+#    port: 587
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#    protocol: smtp
+#    test-connection: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://sts.windows.net/09d8c2b8-850c-4d96-a486-cbc8dfe86610/
+#          jwk-set-uri: https://login.microsoftonline.com/09d8c2b8-850c-4d96-a486-cbc8dfe86610/discovery/v2.0/keys
+
+html-template:
+  email:
+    inward:
+      creation:
+        location: emails/inward_creation
+        variable: inward
+    outward:
+      creation:
+        location: emails/outward_creation
+        variable: outward
+    onboard:
+      creation:
+        location: emails/onboard_creation
+        variable: onboard
+    relieving:
+      creation:
+        location: emails/relieving_creation
+        variable: relieving
+  pdf:
+    inward:
+      location: pdf/inward
+      variable: inward
+    outward:
+      location: pdf/outward
+      variable: outward
+    onboard:
+      location: pdf/onboard
+      variable: onboard
+    relieving:
+      location: pdf/relieving
+      variable: relieving
+
+

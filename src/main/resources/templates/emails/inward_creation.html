@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <style>
+        .border {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+<div>New Inward has been created <p th:utext="${inward.id}"></p></div>
+
+<table>
+    <tr>
+        <td>Receiver Name</td>
+        <td th:utext="${inward.receiverName}"></td>
+    </tr>
+    <div th:if="${inward.others}">
+        <tr>
+            <td>Vendor Name</td>
+            <td th:utext="${inward.vendorName}"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:utext="${inward.name}"></td>
+        </tr>
+    </div>
+    <div th:if="!${inward.others}">
+        <tr>
+            <td>Provider ID</td>
+            <td th:utext="${inward.providerId}"></td>
+        </tr>
+        <tr>
+            <td>Provider Name</td>
+            <td th:utext="${inward.providerName}"></td>
+        </tr>
+    </div>
+</table>
+
+<!--<table>-->
+<!--    <tbody>-->
+<!--    <tr th:each="inwarditem: ${inward.inwardItems}">-->
+<!--        <td th:text="${inwarditem.accessory.name}"/>-->
+<!--        <td th:text="${inwarditem.name}"/>-->
+<!--        <td th:text="${inwarditem.serialNo}"/>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<!--<tr th:each="inwarditem: ${inward.inwardItems}">-->
+<!--    <td class="border" th:text="${inwarditem.accessory.name}"/>-->
+<!--    <td class="border" th:text="${inwarditem.name}"/>-->
+<!--    <td class="border" th:text="${inwarditem.serialNo}"/>-->
+<!--</tr>-->
+<table class="table table-hover">
+<tr th:each="inwarditem: ${inward.inwardItems}">
+    <td  th:text="${inwarditem.accessory.name}"/>
+    <td  th:text="${inwarditem.name}"/>
+    <td  th:text="${inwarditem.serialNo}"/>
+</tr>
+</table>
+
+</body>
+</html>
+
