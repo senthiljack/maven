@@ -116,6 +116,19 @@
 			<version>9.1.22</version>
 		</dependency>
 	</dependencies>
+	   <scm>
+        <url>https://github.com/senthiljack/maven.git</url>
+        <developerConnection>scm:git:git@github.com:senthiljack/maven.git</developerConnection>
+        <connection>scm:git:https://github.com/senthiljack/maven.git</connection>
+        <tag>v1.2.5</tag>
+    </scm>
+     <distributionManagement>
+         <repository>
+             <id>maven</id>
+             <name>maven</name>
+             <url>https://mydomain-633873864852.d.codeartifact.us-east-1.amazonaws.com/maven/maven/</url>
+         </repository>
+     </distributionManagement>
 
 	<build>
 		<plugins>
