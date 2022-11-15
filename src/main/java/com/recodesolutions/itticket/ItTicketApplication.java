@@ -14,12 +14,20 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 
 @SpringBootApplication
 @EnableAsync
 @EnableCaching
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @EnableJpaRepositories(repositoryFactoryBeanClass = EnversRevisionRepositoryFactoryBean.class)
+@SecurityScheme(type = SecuritySchemeType.HTTP,scheme = "Bearer", name = "api_key", in = SecuritySchemeIn.HEADER)
+@OpenAPIDefinition(info = @Info(title = "${spring.application.name}", version = "0.0.1"), security = { @SecurityRequirement(name = "api_key") })
 public class ItTicketApplication {
 
 	public static void main(String[] args) {

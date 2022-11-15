@@ -51,10 +51,10 @@ public class RequestFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         log.info("Logging Request  {} : {}", req.getMethod(), req.getRequestURI());
         String path = req.getRequestURI().substring(req.getContextPath().length());
-        Boolean skip=Boolean.FALSE;
-        if(path.contains("/swagger-ui")){
-            skip=Boolean.TRUE;
-        }
+        Boolean skip=Boolean.TRUE;
+if(path.contains("/api/")){
+    skip=Boolean.FALSE;
+}
         if(!skip){
             Jwt jwt = (Jwt) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             Map<String, Object> claims = jwt.getClaims();
