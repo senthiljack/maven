@@ -1,5 +1,5 @@
 FROM nginx
-WORKDIR /var/www/html/
-COPY index.html /var/www/html
+WORKDIR /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
 
 
