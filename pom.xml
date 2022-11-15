@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
     <artifactId>mypro</artifactId>
-    <version>1.2.50-SNAPSHOT</version>
+    <version>1.2.50</version>
     <packaging>jar</packaging>
    
     <properties>
@@ -16,7 +16,7 @@
         <url>https://github.com/senthiljack/maven.git</url>
         <developerConnection>scm:git:git@github.com:senthiljack/maven.git</developerConnection>
         <connection>scm:git:https://github.com/senthiljack/maven.git</connection>
-        <tag>v1.2.5</tag>
+        <tag>v1.2.50</tag>
     </scm>
      <distributionManagement>
          <repository>
