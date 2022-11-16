@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.recodesolutions</groupId>
 	<artifactId>it-ticket</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>it-ticket</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -119,7 +119,7 @@
         <url>https://github.com/senthiljack/maven.git</url>
         <developerConnection>scm:git:git@github.com:senthiljack/maven.git</developerConnection>
         <connection>scm:git:https://github.com/senthiljack/maven.git</connection>
-        <tag>v1.2.5</tag>
+        <tag>it-ticket-0.0.2</tag>
     </scm>
      <distributionManagement>
          <repository>
